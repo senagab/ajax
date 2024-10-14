@@ -54,10 +54,15 @@ $(document).ready(function () {
             const endereco = `${logradouro}, ${bairro}, ${cidade}, ${estado}`;
             $('#endereco').val(endereco);
         })
-        setTimeout(function () {
-            $(botao).find('i').removeClass('d-none');
-            $(botao).find('span').addClass('d-none');
-        }, 2000);
+        .catch(function (erro) {
+            alert("ocorreu um erro ao buscar o endereço, tente novamente mais tarde.")
+        })
+        .finally(function (){
 
+            setTimeout(function () {
+                $(botao).find('i').removeClass('d-none');
+                $(botao).find('span').addClass('d-none');
+            }, 1000);
+        })
     })
 })
