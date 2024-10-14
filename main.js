@@ -39,11 +39,18 @@ $(document).ready(function () {
             alert("ocorreu um erro ao buscar o endereço, tente novamente mais tarde.")
         })
         .finally(function (){
-
             setTimeout(function () {
                 $(botao).find('i').removeClass('d-none');
                 $(botao).find('span').addClass('d-none');
             }, 1000);
         })
+    })
+
+    $('#form-pedido').submit(function (evento){
+        evento.preventDefault;
+
+        if($('#nome').val().length == 0) {
+            throw new Error('Digite o nome');
+        }
     })
 })
