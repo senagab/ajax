@@ -11,50 +11,41 @@
     <header>
         <div class="container">
             <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
-            <h1 id="nome" class="profile-name">Gian Souza</h1>
-            <h2 id="sobrenome" class="profile-username">@ogiansouza</h2>
+            <h1 class="profile-name">
+                <span id="nome">
+                    <!-- nome -->
+                </span>
+                <span id="sobrenome">
+                    <!-- sobrenome -->
+                </span>
+            </h1>
+            <h2 class="profile-username">@
+                <span id="username">
+                    <!-- username -->
+                </span>
+            </h2>
             <ul class="numbers">
-                <li id="repos" class="numbers-item">
+                <li class="numbers-item">
                     <h4>Repositórios</h4>
-                    5
+                    <span id="repos">
+                        <!-- repos -->
+                    </span>
                 </li>
-                <li id="seguidores" class="numbers-item">
+                <li class="numbers-item">
                     <h4>Seguidores</h4>
-                    5
+                    <span id="seguidores">
+                        <!-- seguidores -->
+                    </span>
                 </li>
-                <li id="seguindo" class="numbers-item">
+                <li class="numbers-item">
                     <h4>Seguindo</h4>
-                    5
+                    <span id="seguindo">
+                        <!-- seguindo -->
+                    </span>
                 </li>
             </ul>
             <a id="link" href="#" class="profile-link">Ver no Github</a>
         </div>
     </header>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const nome = document.querySelector('#nome');
-            const username = document.querySelector('#username');
-            const avatar = document.querySelector('#avatar');
-            const repos = document.querySelector('#repos');
-            const seguidores = document.querySelector('#seguidores');
-            const seguindo = document.querySelector('#seguindo');
-            const link = document.querySelector('#link');
-
-            fetch('https://api.github.com/users/senagab/json')
-                .then(function (){
-                    return res.json();
-                })
-                .then(function(json) {
-                    nome.innerText = json.name;
-                    username.innerText = json.login;
-                    avatar.innerText = json.avatar_url;
-                    seguidores.innerText = json.followers;
-                    seguindo.innerText = json.following;
-                    repos.innerText = json.public_repos;
-                    link.innerText = json.html_url;
-                })
-        })
-    </script>
 </body>
 </html>
