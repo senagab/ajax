@@ -1,5 +1,5 @@
 :root {
-    --header-color: #01a3a4;
+    --header-color: #062828;
     --bg-color: #eee;
 }
 
@@ -22,7 +22,10 @@ body {
 }
 
 header {
-    background-color: var(--header-color);
+    background-color: rgb(6, 40, 40);
+    background-image: radial-gradient(circle, rgba(6, 40, 40, 1) 0%, rgba(0, 69, 69, 1) 25%, rgba(0, 10, 10, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover; 
     text-align: center;
     height: 30vh;
 }
@@ -49,14 +52,14 @@ header .container {
     color: #999;
 }
 
-.profile-link {
+/* .profile-link {
     background-color: var(--header-color);
     color: var(--bg-color);
     padding: 8px 16px;
     display: inline-block;
     margin-top: 24px;
     text-decoration: none;
-}
+} */
 
 .numbers {
     display: grid;
@@ -70,4 +73,107 @@ header .container {
 
 .numbers-item h4 {
     font-size: .3em;
+}
+
+/* button */
+
+.button {
+    background-color: var(--header-color);
+    display: inline-block;
+    margin-top: 24px;
+    
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button > a {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #134a4a 20%, transparent 30%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #134a4a 15%, transparent 20%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%),
+    radial-gradient(circle, #134a4a 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #062828 20%, transparent 20%),
+    radial-gradient(circle, #062828 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #062828 15%, transparent 20%),
+    radial-gradient(circle, #062828 20%, transparent 20%),
+    radial-gradient(circle, #062828 20%, transparent 20%),
+    radial-gradient(circle, #062828 20%, transparent 20%),
+    radial-gradient(circle, #062828 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }
