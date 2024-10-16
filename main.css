@@ -44,8 +44,9 @@ header .container {
 }
 
 .profile-username {
-    margin: 16px 0 32px;
+    margin: 5px 0 32px;
     font-size: 1.1em;
+    color: #999;
 }
 
 .profile-link {

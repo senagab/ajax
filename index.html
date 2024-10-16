@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Github</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
-            <h1 class="profile-name">
+            <img data-aos="fade-down" data-aos-duration="1500" id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 class="profile-name" data-aos="fade-up" data-aos-duration="1500">
                 <span id="nome">
                     <!-- nome -->
                 </span>
@@ -19,7 +20,7 @@
                     <!-- sobrenome -->
                 </span>
             </h1>
-            <h2 class="profile-username">@
+            <h2 class="profile-username" data-aos="fade-up" data-aos-duration="1500">@
                 <span id="username">
                     <!-- username -->
                 </span>
@@ -48,6 +49,7 @@
         </div>
     </header>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
