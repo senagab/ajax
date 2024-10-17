@@ -9,10 +9,13 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
 }
 
 body {
-    background-color: var(--bg-color);;
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -49,17 +52,8 @@ header .container {
 .profile-username {
     margin: 5px 0 32px;
     font-size: 1.1em;
-    color: #999;
+    color: #999; 
 }
-
-/* .profile-link {
-    background-color: var(--header-color);
-    color: var(--bg-color);
-    padding: 8px 16px;
-    display: inline-block;
-    margin-top: 24px;
-    text-decoration: none;
-} */
 
 .numbers {
     display: grid;
